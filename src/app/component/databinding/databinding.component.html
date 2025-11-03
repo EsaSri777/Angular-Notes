@@ -1,0 +1,139 @@
+<h1>Data Binding</h1>
+<h3>Definition of Data Binding</h3>
+<p>
+  Data binding is a technique that connects the data in the TypeScript
+  (component) with the HTML (view), so that any change in one is immediately
+  reflected in the other.It automates the UI update process, making your code
+  simpler, more predictable, and easier to maintain. You don't have to manually
+  write code to push and pull data between your HTML and your logic.
+</p>
+<h3>Types of Data Binding</h3>
+<p>There are mainly two types of data bindings</p>
+<ul>
+  <li>One way Data Binding</li>
+  <li>Two way Data Binding</li>
+</ul>
+<img [src]="dataImg" />
+<img
+  src="https://handsontable.com/blog/wp-content/uploads/2023/04/image10.png"
+/>
+<h4>One Way Data Binding</h4>
+<p>One way data binding consists of 3 types</p>
+<ul>
+  <li>Interpolation</li>
+  <li>Property Binding</li>
+  <li>Event Binding</li>
+</ul>
+<h3>Interpolation</h3>
+<p>
+  Interpolation in Angular is a type of one-way data binding that allows you to
+  display dynamic data from the component (TypeScript code) into the view (HTML
+  template).
+</p>
+<p>
+  It uses the (double curly braces) syntax. Whatever value is written inside the
+  curly braces is evaluated by Angular and the result is displayed as text in
+  the HTML.It can display variables, expressions, method return values, and even
+  perform simple calculations. It cannot change values in the component, it only
+  shows them in the template.
+</p>
+<p>The data flows in only one direction: from the component → to the view.</p>
+<p>
+  Interpolation = one-way data binding (component → view) using double curly
+  braces.
+</p>
+<h4>Example</h4>
+<img
+  src="https://res.cloudinary.com/ddlrkl4jy/image/upload/v1756144854/interpolation_kwpaqw.jpg"
+/>
+
+<h2>Property Binding</h2>
+<p>
+  Property Binding is a feature in Angular that lets you
+  <b>bind component data to HTML element properties</b>. It updates the
+  element’s property value whenever the component’s data changes, ensuring that
+  the UI always shows the latest data.
+</p>
+
+<h3>Example</h3>
+<ul>
+  <li>&lt;img [src]="imageUrl" &gt;</li>
+</ul>
+<img
+  src="https://res.cloudinary.com/ddlrkl4jy/image/upload/v1756145823/propertyBinding_adquoj.jpg"
+/>
+<p>
+  In this example, the <b>src</b> property of the image will always display the
+  value of <b>imageUrl</b> from the component.
+</p>
+<p>
+  ImgUrl that we are using should be declared in TS file with type string.
+  ImgUrl stores the image address, while we are doing bind in output we are not
+  getting the img link instead we are getting the direct image i.e, here applies
+  the property binding.
+</p>
+<p>Property Binding → one-way (component → element property)</p>
+<p>
+  Property Binding = one-way data binding (component → view) by binding data to
+  element properties using square brackets [ ]
+</p>
+<h3>Event Binding</h3>
+<p>
+  A technique in Angular that allows the view (HTML) to listen to events (like
+  clicks, input, or mouse movements) and call a method in the component when the
+  event occurs. It’s a one-way binding from view → component.
+</p>
+<p>
+  In this a 'event' is first declared in HTML and then it is called in TS
+  component and the required logic will be written there, when the event happens
+  the changes will appear in UI
+</p>
+<p>It connects a user action in the template to a function in the component.</p>
+<p>
+  Event Binding = one-way data binding (HTML → TS component) using parentheses
+  to listen to events, e.g., (click)="methodName()".
+</p>
+<h4>Example</h4>
+<img
+  src="https://res.cloudinary.com/ddlrkl4jy/image/upload/v1756146811/eventBinding_nizugw.jpg"
+/>
+<p>here click should in curved braces like '(click)'</p>
+<h2>Two Way Data Binding</h2>
+<p>
+  Two-way Data Binding is a mechanism that allows synchronization between the
+  component and the view. When the data in the component changes, the view
+  updates automatically, and when the user changes the data in the view (e.g.,
+  typing in an input), the component’s property is updated as well. It combines
+  property binding and event binding into a single step using [( )] syntax
+  called banana-in-a-box.
+</p>
+<p>
+  This can be achived bu using "ngModel" key word in input tag placing in [( )]
+  and assining the value which is declared in TS that have to be modified while
+  input tag is getting modified
+</p>
+<p>It uses the [( )] syntax, called banana-in-a-box.</p>
+<p>
+  Data Binding is a mechanism to coordinate data between the component and the
+  view in Angular. It can be one-way (component → view or view → component) or
+  two-way (both ways), allowing automatic updates when data changes.
+</p>
+<h6>
+  The important thing is while using ngModel it is needed to import is
+  'FormsModule' iN TS component
+</h6>
+<h4>Example</h4>
+<img
+  src="https://res.cloudinary.com/ddlrkl4jy/image/upload/v1756148787/ngModel_lgx4dw.jpg"
+/>
+
+<h5>Live Example of Two-Way Data Binding with Button</h5>
+
+<input
+  [(ngModel)]="userEnteredValue"
+  type="text"
+  placeholder="Enter something"
+/>
+<button (click)="displayVal()">Display</button>
+
+<p>You typed: {{ displayedValue }}</p>

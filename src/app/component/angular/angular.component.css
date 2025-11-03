@@ -1,0 +1,118 @@
+/* Using :host to apply styles to the component's host element */
+:host {
+  display: block; /* Ensures the component takes up block-level space */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #f4f7f9; /* A light, soft background color */
+  color: #333; /* Dark grey for text for better readability */
+  padding: 2rem; /* Add padding around the entire component */
+}
+
+/* Main container styles for content */
+/* In a real app, you might wrap your content in a div, but we can style the host for now */
+:host {
+  max-width: 900px;
+  margin: 2rem auto; /* Center the content on the page */
+  background-color: #ffffff; /* White background for the content card */
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  border: 1px solid #e0e0e0;
+}
+
+/* --- TYPOGRAPHY & HEADINGS --- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  color: #1a237e; /* A deep indigo for primary headings */
+}
+
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #e3f2fd; /* A light blue underline */
+  color: #0d47a1; /* A strong blue for the main title */
+}
+
+h2 {
+  font-size: 2.2rem;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #eeeeee; /* Subtle separator for sections */
+  color: #1565c0; /* Slightly lighter blue for sections */
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #1e88e5; /* A vibrant blue for sub-sections */
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #424242; /* Darker grey for smaller headings */
+  font-style: italic;
+}
+
+/* --- PARAGRAPHS & TEXT --- */
+
+p {
+  font-size: 1rem;
+  line-height: 1.7; /* Generous line spacing for readability */
+  margin-bottom: 1.2em;
+  color: #555; /* Slightly softer than pure black */
+}
+
+/* Style for bold tags to make them stand out */
+b {
+  color: #0d47a1; /* Match the main heading color */
+  font-weight: 600;
+}
+
+/* Style for inline code tags */
+code {
+  background-color: #e3f2fd; /* Light blue background */
+  color: #0d47a1;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+}
+
+/* --- LISTS (UL / LI) --- */
+
+ul {
+  padding-left: 25px; /* Indent lists */
+  margin-bottom: 1.5em;
+}
+
+/* Styling for list items */
+li {
+  padding-left: 10px;
+  margin-bottom: 0.8em; /* Space between list items */
+  line-height: 1.6;
+}
+
+/* Custom list bullet style for a cleaner look */
+li::marker {
+  color: #1e88e5; /* Blue bullet points */
+  font-size: 1.2em;
+}
+
+/* Nested list styling */
+ul ul {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+ul ul li {
+  margin-bottom: 0.5em;
+}
+
+ul ul li::marker {
+  color: #90caf9; /* Lighter blue for nested bullets */
+}

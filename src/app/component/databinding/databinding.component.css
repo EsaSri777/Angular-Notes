@@ -1,0 +1,196 @@
+:host {
+  display: block; /* Ensures the component takes up block-level space */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #f4f7f9; /* A light, soft background color */
+  color: #333; /* Dark grey for text for better readability */
+  padding: 2rem; /* Add padding around the entire component */
+}
+
+/* Main container styles for content */
+/* In a real app, you might wrap your content in a div, but we can style the host for now */
+:host {
+  max-width: 900px;
+  margin: 2rem auto; /* Center the content on the page */
+  background-color: #ffffff; /* White background for the content card */
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  border: 1px solid #e0e0e0;
+}
+/* --- MAIN PAGE STYLING --- */
+body {
+  background-color: #f4f7f9; /* Soft light background */
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+/* --- NOTES CONTAINER (MODIFIED) --- */
+.notes-container {
+  background-color: #ffffff;
+  color: #333;
+  padding: 2.5rem 3rem; /* Adjusted padding */
+  margin: 0 auto 2rem auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid #1e88e5; /* ADDED: Blue top border like the image */
+}
+
+/* --- HEADINGS --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+/* h1 is already a good match for "Angular" title */
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #e3f2fd;
+  color: #0d47a1;
+}
+
+/* MODIFIED: Unified style for section headings to match the image */
+h2,
+h3 {
+  font-size: 2rem;
+  color: #1565c0;
+  border-bottom: 1px solid #d6e6ff; /* Light blue underline */
+  padding-bottom: 0.5em;
+  text-align: left; /* Ensure left alignment */
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #424242;
+  font-style: italic;
+}
+
+h5 {
+  font-size: 1.1rem;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* --- PARAGRAPHS --- */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+  color: #555;
+}
+
+b {
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+code {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+}
+
+/* --- LISTS --- */
+ul {
+  padding-left: 25px;
+  margin-bottom: 1.5em;
+}
+
+li {
+  padding-left: 10px;
+  margin-bottom: 0.8em;
+  line-height: 1.6;
+}
+
+li::marker {
+  color: #1e88e5;
+  font-size: 1.2em;
+}
+
+/* --- IMAGES (CONSOLIDATED & SIMPLIFIED) --- */
+img {
+  max-width: 100%;
+  height: auto; /* REMOVED fixed height to prevent distortion */
+  display: block;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* --- INPUT & BUTTONS --- */
+input[type="text"] {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.8em;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* --- OUTPUT PARAGRAPH --- */
+p.user-output {
+  font-weight: 500;
+  color: #0d47a1;
+}
+
+/* --- IMAGES STYLING --- */
+img {
+  max-width: 100%; /* Makes image responsive */
+  height: 500px; /* Maintains aspect ratio */
+  display: block; /* Removes inline spacing issues */
+  margin: 1.5rem 0; /* Adds top and bottom spacing */
+  border-radius: 12px; /* Rounded corners for a modern look */
+  border: 1px solid #ccc; /* Soft border around the image */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  object-fit: cover; /* Ensures images scale nicely without distortion */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+img:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow */
+}

@@ -1,0 +1,215 @@
+<h1>Angular</h1>
+<h2>Introduction</h2>
+<p>
+  Angular is a platform and framework for building client-side, single-page
+  applications (SPAs: a web application that loads a single HTML page and
+  dynamically updates the content of that page as the user interacts with it )
+  using HTML and TypeScript. Developed and maintained by Google, it provides a
+  structured approach to building complex, dynamic web applications with a focus
+  on modularity( breaking down a large program into smaller), reusability, and
+  maintainability (process of modifying, updating, or adapting a software)
+</p>
+
+<h2>Difference between Angular and React</h2>
+<p>
+  Angular is a complete framework with a structured, opinionated approach to web
+  development. React is a JavaScript library focused on building user
+  interfaces.
+</p>
+<p>
+  Angular is like a blueprint for building a house; it gives you a clear plan
+  and all the tools. React is like a toolkit for building a house; it gives you
+  great tools for specific tasks, but you have to come up with the plan
+  yourself.
+</p>
+
+<h3>Why Angular?</h3>
+<p>
+  <b>Structure:</b> It provides a consistent, built-in structure for large-scale
+  applications, making them easier to manage and scale. <b>TypeScript:</b> It
+  uses TypeScript by default, which adds type safety and helps catch errors
+  early. <b>"Batteries Included":</b> Angular includes everything you need out
+  of the box—routing, state management, and an efficient command-line interface
+  (CLI).
+</p>
+
+<h3>Versions Of Angular</h3>
+<p>
+  Angular versions are released on a six-month schedule. Currently there are 20
+  versions in Angular. First vversion is developed using JS and it is known as
+  AngularJs and after that all version are build using TS only
+</p>
+
+<h2>Prerequisites needed for angular</h2>
+<p>
+  <b>Node.js & npm:</b> Angular runs on Node.js and uses its package manager,
+  npm, to install all the necessary dependencies. You'll need to have a recent,
+  stable version of Node.js installed on your system. npm -> " It's the standard
+  tool for managing JavaScript packages and is the default package manager for
+  Node.js. "
+</p>
+<p>
+  <b>IDE(Integrated Development Environment)(Code-Editor):</b> You'll need a
+  good code editor with solid support for Angular, TypeScript, and debugging.
+  Visual Studio Code is the most popular choice as it has excellent extensions
+  specifically for Angular.
+</p>
+<p>
+  <b>AngularCLI :</b>"The main work of the Angular CLI is to automate and
+  streamline the entire development workflow". The CLI automates the creation of
+  a new Angular project with a single command (ng new my-app). This sets up all
+  the necessary files, configurations, and dependencies, saving you hours of
+  manual work. It can quickly generate core building blocks like components,
+  services, and modules using simple commands (ng generate component
+  my-component). This ensures a consistent project structure and saves you from
+  manually creating and linking files.The CLI is integrated with testing
+  frameworks, allowing you to run unit and end-to-end tests with simple commands
+</p>
+<p>
+  To install AngularCLI the command is "npm install -g angular/cliversion_num"
+  (here '-g' indicated it is installed globally )
+</p>
+<p>
+  <b>NPM :</b>Node Package Manager, is the world's largest software registry and
+  a command-line tool for managing JavaScript packages.It allows developers to
+  easily share, discover, and use pre-written code packages to speed up their
+  development process.
+</p>
+
+<h4>Components</h4>
+<p>
+  A Component is the basic building block of an Angular application that
+  controls a section of the user interface.It has three parts: a class (for
+  logic), a template (for HTML view), and styles (for design). The Component
+  decorator tells Angular how to use it. Every app has one main component called
+  AppComponent, and more components can be added to make the app organized and
+  reusable.
+</p>
+<p>It contains mainly 4 main parts</p>
+<ul>
+  <li>Html Component</li>
+  <li>css Component</li>
+  <li>spects.ts component</li>
+  <li>ts component</li>
+</ul>
+
+<h3>App Component</h3>
+<p>
+  It's the main component in a angular file.The AppComponent is the root
+  component of every Angular application. It is the first component that loads
+  when the app starts and acts as the main container for the whole application.
+  All other components are either directly or indirectly children of the
+  AppComponent. It is defined in the app-component-ts file, and it uses an HTML
+  template (app-component-html) and styles (app-component-css). The selector for
+  AppComponent is usually "app-root", which is placed inside the index.html file
+  to display the Angular app in the browser. In short, AppComponent is the entry
+  point and backbone of an Angular application.
+</p>
+
+<h4>Type Script Based</h4>
+<p>
+  Angular is built on TypeScript because it provides features that plain
+  JavaScript lacks, such as type safety, classes, interfaces, and better tooling
+  support. These features help developers catch errors early, write cleaner
+  code, and build large, complex applications more easily and reliably.Also
+  Helps in error detection at compile time and makes code more scalable.
+  TypeScript also compiles down to JavaScript, so Angular apps can run in any
+  browser.
+</p>
+<p>
+  TypeScript → JavaScript → Browser’s JS Engine → Machine Code (Binary) → CPU
+  Execution
+</p>
+
+<h4>Angular Project Structure</h4>
+<p>
+  >When you create a new project using ng new, Angular generates a folder
+  structure:
+</p>
+<p>src-app → contains modules, components, services</p>
+<p>main-ts → entry point that bootstraps the app</p>
+<p>index-html → root HTML file where app-root is placed</p>
+<p>angular-json → config file for build & project settings</p>
+<p>package-json → dependencies and npm scripts</p>
+
+<h2>Structure of an Angular Project</h2>
+<p>
+  When we create a new Angular project using the Angular CLI command
+  <b>ng new project-name</b>, it automatically generates a standard folder
+  structure. This structure helps in organizing files and makes the development
+  process easier and more scalable.
+</p>
+
+<h3>Main Folders and Files</h3>
+<ul>
+  <li>
+    <b>e2e/</b> → Contains end-to-end test files to test the application flow as
+    a whole.
+  </li>
+  <li>
+    <b>node_modules/</b> → Contains all project dependencies and packages
+    installed through npm.
+  </li>
+  <li>
+    <b>src/</b> → The main source folder where the actual application code
+    resides.
+    <ul>
+      <li>
+        <b>app/</b> → Contains the core of the application such as modules,
+        components, and services.
+        <ul>
+          <li><b>app.component.ts</b> → Logic of the root component.</li>
+          <li>
+            <b>app.component.html</b> → Template (UI) of the root component.
+          </li>
+          <li><b>app.component.css</b> → Styling of the root component.</li>
+          <li>
+            <b>app.module.ts</b> → Root module that bootstraps the application.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>assets/</b> → Stores static files like images, icons, and JSON data.
+      </li>
+      <li>
+        <b>environments/</b> → Contains environment-specific configuration files
+        (development, production).
+      </li>
+      <li>
+        <b>main.ts</b> → The entry point of the Angular app. It bootstraps the
+        root module (AppModule).
+      </li>
+      <li>
+        <b>index.html</b> → The main HTML file loaded in the browser. The
+        Angular app gets displayed inside the <code>&lt;app-root&gt;</code>
+        selector here.
+      </li>
+      <li><b>styles.css</b> → Global stylesheet for the entire project.</li>
+      <li><b>polyfills.ts</b> → Provides compatibility for older browsers.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Configuration Files</h3>
+<ul>
+  <li>
+    <b>angular.json</b> → Defines project configuration (build settings, styles,
+    scripts, assets).
+  </li>
+  <li>
+    <b>package.json</b> → Lists project dependencies, scripts, and npm commands.
+  </li>
+  <li><b>tsconfig.json</b> → TypeScript configuration file.</li>
+  <li><b>karma.conf.js</b> → Configuration file for running unit tests.</li>
+  <li>
+    <b>tslint.json</b> (or eslint.json in newer versions) → Defines linting
+    rules for code quality.
+  </li>
+</ul>
+
+<p>
+  This structure ensures that Angular applications are
+  <b>modular, maintainable, and scalable</b>. Developers can easily add new
+  components, services, and modules without breaking the organization of the
+  project.
+</p>
